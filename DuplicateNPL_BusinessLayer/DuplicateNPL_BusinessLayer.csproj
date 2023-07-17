@@ -56,7 +56,7 @@
       <Project>{619872d3-ebc8-49c5-a8b5-6c7f29ee129d}</Project>
       <Name>DuplicateNPL_Model</Name>
     </ProjectReference>
-    <ProjectReference Include="..\MaxIDSDuplicateNPL\DuplicateNPL_Repository.csproj">
+    <ProjectReference Include="..\DuplicateNPL_Repository\DuplicateNPL_Repository.csproj">
       <Project>{c4a10f0c-b395-4b5a-9ae0-9ebdb48d3965}</Project>
       <Name>DuplicateNPL_Repository</Name>
     </ProjectReference>

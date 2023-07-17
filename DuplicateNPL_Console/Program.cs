@@ -3,17 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using DuplicateNPL_BusinessLayer;
 namespace DuplicateNPL_Console
 {
-    public class Program
+    class Program
     {
-        public static void Main (string[] args)
+        static void Main(string[] args)
         {
-            void ProcessDuplicateNPLRecords()
-            {
-
-            }
+            DeDuplication deDuplication = new DeDuplication();
+            deDuplication.CheckDuplicateNPLReferences(args[0].ToString(), args[1].ToString());
         }
     }
 }
