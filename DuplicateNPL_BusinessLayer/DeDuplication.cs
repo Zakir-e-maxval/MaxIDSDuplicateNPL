@@ -26,7 +26,8 @@ namespace DuplicateNPL_BusinessLayer
                 string[] dontCheck = nplSettings.Select(x => x.ExcludedWords).ToArray();
                 int? matchingPercentage = nplSettings.Select(x => x.Percentage).FirstOrDefault();
 
-                List<NplModel> inputNPLlist = (InputText.Count > 0 && !OnceOffRequired) ? InputText : nplList.Where(x => x.IsDuplicateCheck == 0).ToList();
+                //List<NplModel> inputNPLlist = (InputText.Count > 0 && !OnceOffRequired) ? InputText : nplList.Where(x => x.IsDuplicateCheck == 0).ToList();
+                List<NplModel> inputNPLlist = nplList.Where(x => x.IsDuplicateCheck == 0).ToList();
                 string pattern = "[~!@#$%^&*_+<>{}(),\".-]|(" + string.Join("|", dontCheck) + ")";
 
                 if (nplList.Count > 0 && inputNPLlist.Count > 0)
