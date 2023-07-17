@@ -10,8 +10,12 @@ namespace DuplicateNPL_Console
     {
         static void Main(string[] args)
         {
-            DeDuplication deDuplication = new DeDuplication();
-            deDuplication.CheckDuplicateNPLReferences(args[0].ToString(), args[1].ToString());
+            args = new string[] { "InitiateTocProcess", "23495" };
+            if (args.Length > 0)
+            {
+                DeDuplication deDuplication = new DeDuplication();
+                deDuplication.CheckDuplicateNPLReferences(args[0].ToString(), args[1].ToString());
+            }
         }
     }
 }
